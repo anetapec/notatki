@@ -4,7 +4,7 @@ from shop.product import Product, print_product
 
 class Order:
 
-    def __int__(self, client_first_name, client_last_name, products=None):
+    def __init__(self, client_first_name, client_last_name, products=None):
         self.client_first_name = client_first_name
         self.client_last_name = client_last_name
         if products is None:
@@ -17,26 +17,26 @@ class Order:
             total_price += product.unit_price
         self.total_price = total_price
 
-    def print_order(order):
-        print("=" * 20)
-        print(f"Zamówienie złożone przez {order.client_first_name} {order.client_last_name}")
-        print(f" O łącznej wartości {order.total_price} PLN")
-        print("Zamówione produkty:")
-        for product in order.products:
-            print("\t", end="")
-            print_product(product)
-        print("=" * 20)
-        print()
+def print_order(order):
+    print("=" * 20)
+    print(f"Zamówienie złożone przez {order.client_first_name} {order.client_last_name}")
+    print(f" O łącznej wartości {order.total_price} PLN")
+    print("Zamówione produkty:")
+    for product in order.products:
+        print("\t", end="")
+        print_product(product)
+    print("=" * 20)
+    print()
 
-    def generate_order():
-        number_of_product = random.randint(1, 10)
-        products = []
-        for product_number in range(number_of_product):
-            product_name = f"Produkt: {product_number}"
-            category_name = "Inne"
-            unit_price = random.randint(1, 30)
-            product = Product(product_name, category_name, unit_price)
-            products.append(product)
+def generate_order():
+    number_of_product = random.randint(1, 10)
+    products = []
+    for product_number in range(number_of_product):
+        product_name = f"Produkt: {product_number}"
+        category_name = "Inne"
+        unit_price = random.randint(1, 30)
+        product = Product(product_name, category_name, unit_price)
+        products.append(product)
 
-        order = Order(client_first_name="Aneta", client_last_name="Gawron", products=products)
-        return order
+    order = Order(client_first_name="Aneta", client_last_name="Gawron", products=products)
+    return order
