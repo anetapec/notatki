@@ -1,6 +1,7 @@
-from shop.aplle import Aplle
+from shop.apple import Aplle
 from shop.order import print_order, generate_order
 from shop.patato import Patato
+
 
 def run_homework():
     green_aplle = Aplle(species_name="Green", size="M", price=3.5)
@@ -13,8 +14,9 @@ def run_homework():
 
     first_order = generate_order()
     print_order(first_order)
-    second_order = generate_order
+    second_order = generate_order()
     print_order(second_order)
+
 
 if __name__ == '__main__':
     run_homework()
