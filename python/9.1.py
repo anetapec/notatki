@@ -8,12 +8,12 @@ class Restaurant():
         """"Wyświetla info o restauracji"""
         print(f"Restauracja {self.restaurant_name.title()} serwuje kuchnię {self.cuisine_type}")
 
-    def open_restaurant(self):
-        print(f"Restauracja jest czynna w godzinach {self.opening_hours}")
+    #def open_restaurant(self):
+        #print(f"Restauracja jest czynna w godzinach {self.opening_hours}")
 
 
 restaurant = Restaurant('2 okna', 'włoską')
-openieng_hours = Restaurant('12.00 do 23.00')
+#openieng_hours = Restaurant('12.00 do 23.00')
 
 restaurant.describe_restaurant()
-openieng_hours.open_restaurant()
+#openieng_hours.open_restaurant()
