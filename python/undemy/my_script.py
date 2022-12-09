@@ -1,6 +1,9 @@
 from bankAcount import MinimumBalanceAcount
 
-accountMinimum = MinimumBalanceAcount(1500, 1000)
+accountMin = MinimumBalanceAccount(1500, 1000)
 
-result = accountMinimum.try_withdraw(400)
+
+result = accountMin.try_withdraw(600)
+
+
 print(result.message)

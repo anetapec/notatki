@@ -1,6 +1,6 @@
 class Result():
-    def __init__(self, isSuccess, message, value):
-        self.isSuccess = None
+    def __init__(self, isSuccess, message, value = None):
+        self.isSuccess = isSuccess
         self.message = message
         self.value = value
 
@@ -39,5 +39,13 @@ class MinimumBalanceAcount(BankAcount):
         if self.balance - amount > self.minimumBalance:
             return super().try_withdraw(amount)
         else:
-            return Error ('Nieudało się, próba przekroczenia progu', amount)
+            return result('Nieudało się, próba przekroczenia progu', amount)
 
+
+accountMin = MinimumBalanceAcount(1500, 1000)
+
+
+result = accountMin.try_withdraw(600)
+
+
+print(result.message)
