@@ -1,4 +1,4 @@
-#napisz program w którym uzytkownik :
+1#napisz program w którym uzytkownik :
 #1) doda nowe definicje
 #2)szuka istniejących definicji
 #3)usuwa wybrane przez niego definicje
